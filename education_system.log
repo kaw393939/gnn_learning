@@ -1,0 +1,39 @@
+2025-02-27 22:43:24,804 - gnn_education_system - INFO - Loaded configuration from config.yaml
+2025-02-27 22:43:24,811 - gnn_education_system - INFO - Built heterogeneous graph with node counts: {'concept': 6, 'question': 4, 'resource': 3, 'learner': 2}
+2025-02-27 22:43:24,812 - gnn_education_system - INFO - Edge counts: {('question', 'tests', 'concept'): 4, ('resource', 'teaches', 'concept'): 3, ('concept', 'requires', 'concept'): 5, ('learner', 'studies', 'concept'): 7, ('learner', 'answered', 'question'): 4, ('learner', 'used', 'resource'): 2, ('concept', 'studied_by', 'learner'): 7, ('concept', 'taught_by', 'resource'): 3, ('question', 'answered_by', 'learner'): 4, ('resource', 'used_by', 'learner'): 2, ('concept', 'required_for', 'concept'): 5, ('concept', 'tested_by', 'question'): 4}
+2025-02-27 22:43:24,812 - gnn_education_system - INFO - Knowledge graph initialized successfully
+2025-02-27 22:43:24,858 - gnn_education_system - INFO - OpenAI client initialized successfully
+2025-02-27 22:43:24,858 - gnn_education_system - INFO - LLM service initialized
+2025-02-27 22:43:24,858 - gnn_education_system - INFO - Content generator initialized
+2025-02-27 22:43:25,321 - gnn_education_system - INFO - Model trainer initialized. Using device: cuda
+2025-02-27 22:43:25,322 - gnn_education_system - INFO - Achievement system initialized
+2025-02-27 22:43:25,322 - gnn_education_system - INFO - Recommendation system initialized
+2025-02-27 22:43:25,429 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 22:43:25,429 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 22:43:25,429 - gnn_education_system - INFO - Educational system initialized successfully
+2025-02-27 22:43:25,506 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 22:43:25,507 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 22:43:33,790 - root - INFO - Refreshing node embeddings
+2025-02-27 22:43:38,081 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:43:39,865 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:43:45,971 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:43:47,359 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:43:47,377 - gnn_education_system - INFO - Knowledge graph data saved successfully
+2025-02-27 22:50:58,192 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:51:00,200 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-27 22:51:00,232 - gnn_education_system - INFO - Knowledge graph data saved successfully
+2025-02-27 23:02:21,870 - gnn_education_system - INFO - Loaded configuration from config.yaml
+2025-02-27 23:02:21,879 - gnn_education_system - INFO - Built heterogeneous graph with node counts: {'concept': 6, 'question': 4, 'resource': 3, 'learner': 2}
+2025-02-27 23:02:21,880 - gnn_education_system - INFO - Edge counts: {('question', 'tests', 'concept'): 4, ('resource', 'teaches', 'concept'): 3, ('concept', 'requires', 'concept'): 5, ('learner', 'studies', 'concept'): 7, ('learner', 'answered', 'question'): 4, ('learner', 'used', 'resource'): 2, ('concept', 'studied_by', 'learner'): 7, ('concept', 'taught_by', 'resource'): 3, ('question', 'answered_by', 'learner'): 4, ('resource', 'used_by', 'learner'): 2, ('concept', 'required_for', 'concept'): 5, ('concept', 'tested_by', 'question'): 4}
+2025-02-27 23:02:21,880 - gnn_education_system - INFO - Knowledge graph initialized successfully
+2025-02-27 23:02:21,929 - gnn_education_system - INFO - OpenAI client initialized successfully
+2025-02-27 23:02:21,929 - gnn_education_system - INFO - LLM service initialized
+2025-02-27 23:02:21,930 - gnn_education_system - INFO - Content generator initialized
+2025-02-27 23:02:22,281 - gnn_education_system - INFO - Model trainer initialized. Using device: cuda
+2025-02-27 23:02:22,281 - gnn_education_system - INFO - Achievement system initialized
+2025-02-27 23:02:22,281 - gnn_education_system - INFO - Recommendation system initialized
+2025-02-27 23:02:22,404 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 23:02:22,405 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 23:02:22,405 - gnn_education_system - INFO - Educational system initialized successfully
+2025-02-27 23:02:22,495 - gnn_education_system - INFO - Model loaded from data/model.pt
+2025-02-27 23:02:22,496 - gnn_education_system - INFO - Model loaded from data/model.pt
