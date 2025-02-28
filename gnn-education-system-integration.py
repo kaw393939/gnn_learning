@@ -1,38 +1,29 @@
-"""
-GNN Educational System Integration Guide
-
-This guide shows how to prepare and run the Educational Achievement and Recommendation System
-with the Streamlit interface.
-"""
-
 import os
 import sys
+import shutil
 
-# Step 1: Rename the original script to gnn_education_system.py
-# This is needed as the Streamlit app imports from this module
-
-def prepare_system():
-    """Prepare the GNN Educational System for use with Streamlit"""
+def prepare_system(source_file="gnn_model.py"):
+    """Prepare the GNN Educational System for use with Streamlit
     
-    # Check if original script exists
-    if not os.path.exists("paste.txt"):
-        print("Error: Original script (paste.txt) not found!")
+    Args:
+        source_file: Path to the Python file containing the GNN model code
+    """
+    
+    # Check if source file exists
+    if not os.path.exists(source_file):
+        print(f"Error: Source file ({source_file}) not found!")
         return False
     
-    # Rename to proper module name
-    if not os.path.exists("gnn_education_system.py"):
-        print("Converting original script to module...")
+    # Copy to proper module name if needed
+    if source_file != "gnn_education_system.py":
+        print(f"Converting {source_file} to module...")
         
-        with open("paste.txt", "r", encoding="utf-8") as source_file:
-            content = source_file.read()
-        
-        # Save as Python module
-        with open("gnn_education_system.py", "w", encoding="utf-8") as module_file:
-            module_file.write(content)
+        # Copy the file to the module name
+        shutil.copy2(source_file, "gnn_education_system.py")
         
         print("✅ Created gnn_education_system.py module")
     else:
-        print("✅ gnn_education_system.py module already exists")
+        print("✅ Source file is already named correctly")
     
     # Create data directory if it doesn't exist
     os.makedirs("data", exist_ok=True)
@@ -114,10 +105,20 @@ def run_app():
 if __name__ == "__main__":
     print("\nPreparing GNN Educational System for Streamlit...\n")
     
-    if prepare_system():
-        print("\n✅ System preparation complete. Ready to run Streamlit app.")
-        
-        run_app()
+    # Allow user to specify a different source file
+    if len(sys.argv) > 1:
+        source_file = sys.argv[1]
+        if prepare_system(source_file):
+            print(f"\n✅ System preparation complete using {source_file}. Ready to run Streamlit app.")
+            run_app()
+        else:
+            print(f"\n❌ System preparation failed with {source_file}. Please check the errors above.")
+            sys.exit(1)
     else:
-        print("\n❌ System preparation failed. Please check the errors above.")
-        sys.exit(1)
+        # Default behavior
+        if prepare_system():
+            print("\n✅ System preparation complete. Ready to run Streamlit app.")
+            run_app()
+        else:
+            print("\n❌ System preparation failed. Please check the errors above.")
+            sys.exit(1)
